@@ -1,0 +1,92 @@
+/* Body background with image */
+body {
+    background-image: url('bg 2.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #004085;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+
+/* Form Box Styling */
+.form-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 30px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input field and labels */
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 0 5px;
+    
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+}

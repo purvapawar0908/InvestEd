@@ -1,0 +1,106 @@
+/* Body background with image */
+body {
+    background-image: url('bg 2.jpg'); /* Update with your image path */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Keep the logo on the right and center the nav-links */
+    align-items: center;
+    padding: 1rem;
+    background-color: #004085;
+    color: white;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto; /* This will push the logo to the right */
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Add spacing between the links */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); /* Center the nav-links horizontally */
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    
+
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #01349a;
+    
+}
+
+/* Form Box Styling */
+.form-box {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+    padding: 30px;
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 8px, white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 2px solid #a16ac1;
+}
+
+/* Input field and labels */
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #2c93b5;
+    border-radius: 4px;
+}
+
+.input-box label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    color: #333;
+    transition: 0.3s;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #213360;
+    color: white;
+    text-align: center;
+    padding: 30px ;
+    margin-top: auto;
+
+}
+
+footer p {
+    margin: 0;
+}
+

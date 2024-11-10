@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestED: Tax and Investment Guide</title>
+    <link rel="stylesheet" href="new.css">
+    <style>
+        /* Container for form box */
+        .form-box {
+            background-color: #fff;
+            padding: 30px;
+            max-width: 400px;
+            margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #a16ac1;
+        }
+
+        /* Basic styles for the forms */
+        .form-container {
+            margin: 20px 0;
+            text-align: center;
+        
+        }
+
+        .input-box {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .input-box input {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .input-box label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 16px;
+            transition: 0.3s;
+            background-color: #fff;
+            padding: 0 5px;
+        }
+        .input-box input:focus + label,
+        .input-box input:not(:placeholder-shown) + label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">InvestEd</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About us</a></li>
+        </ul>
+    </nav>
+    
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>InvestED: Your Complete Tax & Investment Guide</h1>
+            <p>Plan your future, save smartly, and maximize your wealth with expert tax and investment advice.</p>
+            
+        </div>
+
+        <!-- Form Box Container -->
+        <div class="form-box">
+            <!-- Login Box -->
+            <div class="form-container" id="loginBox">
+                <h2>Login</h2>
+                <form onsubmit="login(event)">
+                    <div class="input-box">
+                        <input type="email" id="loginEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="loginPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="login-btn">Login</button>
+                </form>
+                <div class="toggle-link" onclick="toggleForms()">Don't have an account? Create Account</div>
+            </div>
+
+            <!-- Signup Box (Initially Hidden) -->
+            <div class="form-container" id="signupBox" style="display: none;">
+                <h2>Create Account</h2>
+                <form onsubmit="signUp(event)">
+                    <div class="input-box">
+                        <input type="text" id="signupName" required>
+                        <label>Name</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="signupEmail" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="signupPassword" required>
+                        <label>Password</label>
+                    </div>
+                    <button type="submit" class="signup-btn">Create Account</button>
+                </form>
+                <div class="toggle-link" onclick="toggleForms()">Already have an account? Log in</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 InvestED. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle visibility between Login and Sign-Up forms
+        function toggleForms() {
+            const loginBox = document.getElementById("loginBox");
+            const signupBox = document.getElementById("signupBox");
+            
+            if (loginBox.style.display === "none") {
+                loginBox.style.display = "block";
+                signupBox.style.display = "none";
+            } else {
+                loginBox.style.display = "none";
+                signupBox.style.display = "block";
+            }
+        }
+
+        // Signup function to store user details in localStorage
+        function signUp(event) {
+            event.preventDefault();
+            const name = document.getElementById("signupName").value;
+            const email = document.getElementById("signupEmail").value;
+            const password = document.getElementById("signupPassword").value;
+
+            // Check if email already exists in localStorage
+            if (localStorage.getItem(email)) {
+                alert("Email already exists. Please choose a different one.");
+                return;
+            }
+
+            // Store the user details in localStorage
+            localStorage.setItem(email, JSON.stringify({ name, password }));
+            alert("Account created successfully!");
+        }
+
+        // Login function to check credentials
+        function login(event) {
+            event.preventDefault();
+            const email = document.getElementById("loginEmail").value;
+            const password = document.getElementById("loginPassword").value;
+
+            // Retrieve the user details from localStorage
+            const storedUser = JSON.parse(localStorage.getItem(email));
+
+            // Check if credentials match
+            if (storedUser && storedUser.password === password) {
+                alert("Login successful!");
+                window.location.href = "home.html"; // Redirect to homepage
+            } else {
+                alert("Invalid email or password.");
+            }
+        }
+    </script>
+</body>
+</html>

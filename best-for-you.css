@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1b1818;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #00509e;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background: url('bg 2.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+/* Income Brackets Section */
+.income-brackets {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.income-brackets h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* Vertical Scroll Container for Income Levels */
+.income-levels {
+    display: flex;
+    flex-direction: column; /* Stacks buttons vertically */
+    align-items: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Income Level Button Styling */
+.income-level {
+    background-color: #00509e;
+    color: white;
+    font-size: 20px;
+    padding: 15px 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: 100%; /* Full width of the container */
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.income-level:hover {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto;
+}
