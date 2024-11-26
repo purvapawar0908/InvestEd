@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestED: Tax and Investment Guide</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section with Background Image and Centered Content -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 id="welcomeMessage">Welcome to InvestED!</h1> <!-- Welcome message here -->
+            <div id="investmentTips" class="tips-container">
+                <!-- Personalized investment advice will be displayed here -->
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Investment Calculator</h3>
+                    <p>Calculate your investments easily</p>
+                    <a href="investment-planner.html" class="btn-primary">Click Here</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Our Features</h3>
+                    <p>Dive deep into what we are offering you</p>
+                    <a href="features.html" class="btn-primary">Click Here</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Income-TAX Calculator</h3>
+                    <p>Choose your regime and calculate your tax based on recent Indian tax laws</p>
+                    <a href="taxcal.html" class="btn-primary">Click Here</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 InvestED. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to display personalized greeting
+        function displayPersonalizedGreeting() {
+            const name = sessionStorage.getItem('userName'); // Fetch user name from sessionStorage
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const currentTime = new Date().getHours(); // Get current hour
+
+            // Determine time of day (morning, afternoon, evening)
+            let timeOfDay = '';
+            if (currentTime < 12) {
+                timeOfDay = 'Good Morning';
+            } else if (currentTime < 18) {
+                timeOfDay = 'Good Afternoon';
+            } else {
+                timeOfDay = 'Good Evening';
+            }
+
+            // Display the greeting with name and time of day
+            if (name) {
+                welcomeMessage.innerHTML = `${timeOfDay}, ${name}! Welcome to InvestED!`;
+            } else {
+                welcomeMessage.innerHTML = `${timeOfDay}, Welcome to InvestED!`;
+            }
+        }
+
+        // Remove age-based investment tips and display a generic message instead
+        function displayInvestmentTips() {
+            const tipsContainer = document.getElementById('investmentTips');
+            let tips = "<p>Explore our investment tools and find the best options for your financial goals.</p>";
+
+            // Display the advice if available
+            if (tipsContainer) {
+                tipsContainer.innerHTML = tips;
+            } else {
+                console.log("Investment tips container not found.");
+            }
+        }
+
+        // Call these functions on page load
+        window.onload = function() {
+            displayPersonalizedGreeting(); // Display personalized greeting
+            displayInvestmentTips();       // Display generic investment tips
+        };
+    </script> <!-- Link to JavaScript file -->
+</body>
+</html>

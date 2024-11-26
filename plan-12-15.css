@@ -1,0 +1,110 @@
+/* Base styles for the page */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Lighter background for the body */
+    color: #333;
+}
+
+header, footer {
+    background-color: #2c3e50; /* Darker blue background for header/footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Main Content Area */
+main {
+    margin: 20px;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Links Styling */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+}
+
+/* Box for Special Content */
+.content-box {
+    background-color: #ecf6fc; /* Light blue background */
+    padding: 15px;
+    margin-top: 20px;
+    border-left: 5px solid #3498db; /* Blue left border */
+    font-style: italic;
+}
+
+/* Table Styling */
+.tax-options-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #3498db;
+    color: white;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f1f1;
+}
+
+tr:hover {
+    background-color: #d6eaf8;
+}
+
+/* Footer Styling */
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}

@@ -1,0 +1,175 @@
+/* Body background with image */
+#welcomeMessage {
+    color: #333;  /* Dark color for visibility */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;  /* Adjust background size to content */
+    padding: 10px 20px; /* Add padding for better spacing around text */
+}
+body {
+    background-image: url('bg 2.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+    
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #00509e;
+    border-radius: 5px;
+}
+/* Hero Section Styling */
+.hero {
+    color: rgb(18, 2, 2);
+    text-align: center;
+    padding: 80px 20px;
+     /* Slightly darkened background */
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+/* Feature List Styling */
+.feature-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-item {
+    background-color: #ffffff;;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+
+}
+
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.feature-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.feature-item a {
+    text-decoration: none;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feature-item a:hover {
+    background-color: #0056b3;
+}
+
+/* Tips Section */
+/* Tips Section */
+.tips-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Light opaque background */
+    color: #333333; /* Dark color for text */
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tips-container p {
+    font-size: 1.2rem;
+    color: #333333; /* Dark color for text */
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
+/* Fade-in animation */
+body.loaded .mission,
+body.loaded .goal {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .feature-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}

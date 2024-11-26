@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features - InvestED: Tax and Investment Guide</title>
+    <link rel="stylesheet" href="features.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container">
+            <h1 id="welcomeMessage">Our Key Features</h1> <!-- Dynamically updated message -->
+            <p id="dynamicMessage">Discover the core features that make InvestED your trusted guide to taxes and investments.</p> <!-- Static message -->
+        </div>
+    </header>
+
+    <!-- Features Section with Vertically Stacked Buttons -->
+    <section class="features">
+        <div class="container">
+            <div class="feature-list">
+                <div class="feature-item">
+                    <h3>Indian Taxation & Laws</h3>
+                    <p>Learn about Indian tax laws</p>
+                    <a href="indian-taxation.html" class="btn-primary">learn more</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Investment</h3>
+                    <p>Get to know about various investment options</p>
+                    <a href="investments.html" class="btn-primary">learn more</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Tax Saving</h3>
+                    <p>Learn about tax saving</p>
+                    <a href="tax-saving.html" class="btn-primary">learn more</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Best For You</h3>
+                    <p>Customized options suited for your needs</p>
+                    <a href="enterincome.html" class="btn-primary">learn more</a>
+                </div>
+                <div class="feature-item">
+                    <h3>Resources </h3>
+                    <p>Dive into the various resources</p>
+                    <a href="resources.html" class="btn-primary">learn more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 InvestED. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to display personalized greeting and message
+        window.onload = function() {
+            const userName = sessionStorage.getItem('userName'); // Retrieve user name from sessionStorage
+            const welcomeMessage = document.getElementById('welcomeMessage');
+            const dynamicMessage = document.getElementById('dynamicMessage');
+
+            // Display personalized message if the name is available
+            if (userName) {
+                welcomeMessage.innerHTML = `Hello, ${userName}! Explore our Key Features`;
+                dynamicMessage.innerHTML = `Discover the core features that make InvestED your trusted guide to taxes and investments, ${userName}.`;
+            }
+        };
+    </script>
+</body>
+</html>

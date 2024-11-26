@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvestED: Tax and Investment Guide</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">InvestEd</div>
+        
+    </nav>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>InvestED: Your Complete Tax & Investment Guide</h1>
+            <p>Plan your future, save smartly, and maximize your wealth with expert tax and investment advice.</p>
+        </div>
+        <div class="container">
+            <!-- Age and Name Form -->
+            <form id="user-form" method="post" action="https://script.google.com/macros/s/AKfycbyH7hKTQDDUKC9WdwrfNzZ9YVgKloYnoT-2_Og34LaVm9IDi8k_x7SljpyADLker_2x/exec">
+                <h4>Enter Your Details</h4>
+                <input type="text" name="your-name" placeholder="Your Name" required>
+                <input type="number" name="your-age" placeholder="Your Age" min="1" required>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 InvestED. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Handle User Form Submission
+        const userForm = document.getElementById('user-form');
+
+        userForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = userForm['your-name'].value;
+            const age = userForm['your-age'].value;
+
+            // Store name in sessionStorage
+            sessionStorage.setItem('userName', name);
+
+            // Display success message
+            alert('Details submitted successfully for ' + name + ', Age: ' + age);
+
+            // Submit form to Google Sheets
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyH7hKTQDDUKC9WdwrfNzZ9YVgKloYnoT-2_Og34LaVm9IDi8k_x7SljpyADLker_2x/exec';
+            fetch(scriptURL, {
+                method: 'POST',
+                body: new FormData(userForm)
+            })
+            .then(response => {
+                alert("Your details have been submitted successfully!");
+                // Redirect to home page after a short delay (optional for better UX)
+                setTimeout(function() {
+                    window.location.href = 'home.html'; // Redirect after successful submission
+                }, 1000); // 1 second delay for the alert message
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* Global Styles */
+
+#welcomeMessage {
+    color: #333;  /* Dark color for visibility */
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;  /* Adjust background size to content */
+    padding: 10px 20px; /* Add padding for better spacing around text */
+}
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #1b1818;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures footer is at the bottom */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+    flex-grow: 1; /* Allows main content to grow and push footer down */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #00509e;
+    border-radius: 5px;
+}
+
+/* Header */
+header.hero {
+    background: url('bg 2.jpg') no-repeat center center/cover;
+    color: rgb(9, 9, 9);
+    padding: 70px 0;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+/* Hero Header with personalized message */
+header.hero h1 {
+    font-size: 36px; /* Smaller font size */
+    font-family: 'Cursive', sans-serif; /* More creative font */
+    margin-bottom: 10px;
+    color: #003366; /* Change text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a soft shadow for effect */
+}
+
+/* Add some padding and spacing if necessary */
+header.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #555; /* Slightly lighter color for the description */
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Hover effect for h1 */
+header.hero h1:hover {
+    color: #00509e; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+
+/* Features Section */
+.features {
+    padding: 20px 0;
+    background-color: #f3f4f6;
+}
+
+.feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.feature-item {
+    background-color: #fff;
+    width: 100%; /* Full width for vertical stacking */
+    max-width: 600px; /* Optional: set a max-width to prevent overly large items */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.feature-item:hover {
+    transform: scale(1.03);
+    background-color: #f1f7ff;
+}
+
+.feature-item h3 {
+    font-size: 22px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Button Styling */
+.btn-primary {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #003366;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #00509e;
+}
+
+/* Footer */
+footer {
+    background-color: #213360;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}

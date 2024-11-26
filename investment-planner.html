@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Planner</title>
+    <link rel="stylesheet" href="investment-planner.css">
+</head>
+<!-- Navigation Bar -->
+<nav class="navbar">
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+</nav>
+<body>
+    <div class="container">
+        <header>
+            <h1>Investment Planner</h1>
+            <p id="greeting">Calculate your future investment growth based on your inputs</p>
+        </header>
+        
+        <div class="calculator popout">
+            <form id="investmentForm">
+                <label for="monthlySalary">Monthly Salary (₹):</label>
+                <input type="number" id="monthlySalary" placeholder="Enter your monthly salary" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age" required min="18" max="65">
+                
+                <label for="monthlyInvestment">Monthly Investment (₹):</label>
+                <input type="number" id="monthlyInvestment" placeholder="Enter monthly investment" required>
+                
+                <label for="years">Number of Years:</label>
+                <input type="number" id="years" placeholder="Enter number of years" required min="1" max="50">
+                
+                <label for="interestRate">Expected Annual Return (%):</label>
+                <input type="number" id="interestRate" placeholder="Enter expected rate of return" required min="1" max="30">
+                
+                <button type="button" onclick="calculateInvestment()">Calculate</button>
+            </form>
+            <div id="result" class="result hidden">
+                <h2>Investment Growth</h2>
+                <p>Your investment after <span id="yearsLabel">0</span> years: ₹<span id="investmentAmount">-</span></p>
+            </div>
+        </div>
+        <canvas id="investmentChart" width="400" height="200"></canvas>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>
+

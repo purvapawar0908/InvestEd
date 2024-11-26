@@ -1,0 +1,127 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container for Content Alignment */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #00509e;
+    border-radius: 5px;
+}
+
+/* Hero Section with Background Image */
+.hero {
+    background: url('bg 2.jpg') no-repeat center center/cover;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+/* Box containing the text and form */
+.income-box {
+    background-color: rgba(255, 255, 255, 0.8); /* Light background for readability */
+    padding: 30px;
+    border: 2px solid #003366;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 90%; /* Limit width to 90% of the container */
+    box-sizing: border-box; /* Prevents padding from causing overflow */
+    margin: 0 auto; /* Center the box horizontally */
+}
+
+.income-box h1 {
+    font-size: 2rem;
+    color: #003366;
+    margin-bottom: 15px;
+}
+
+.income-box p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input Field and Button */
+.income-box input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.income-box button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #003366;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.income-box button:hover {
+    background-color: #00509e;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #213360;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}

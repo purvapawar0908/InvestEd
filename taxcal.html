@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Tax Calculator</title>
+    <link rel="stylesheet" href="taxcal.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header>
+            <h1>Income Tax Calculator</h1>
+            <p id="greeting">Choose your regime and calculate your tax based on recent Indian tax laws</p>
+        </header>
+        
+        <div class="calculator popout">
+            <form id="taxForm">
+                <label for="income">Annual Income (₹):</label>
+                <input type="number" id="income" placeholder="Enter your income here">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" placeholder="Enter your age">
+                
+                <label for="investments">Investments (₹) (only for Old Regime):</label>
+                <input type="number" id="investments" placeholder="Enter investment amount">
+                
+                <label for="regime">Choose Tax Regime:</label>
+                <select id="regime">
+                    <option value="old">Old Regime</option>
+                    <option value="new">New Regime</option>
+                </select>
+                
+                <button type="button" onclick="calculateTax()">Calculate Tax</button>
+            </form>
+            <div id="result" class="result hidden">
+                <h2>Tax Result</h2>
+                <p>Your estimated tax is: ₹<span id="taxAmount">-</span></p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
